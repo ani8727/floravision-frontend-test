@@ -1,5 +1,6 @@
 import Navbar from "./components/navbar/Navbar";
 import HeroSection from "./components/hero/HeroSection";
+import TrendingSection from "./components/trending/TrendingSection";
 import bg from "./assets/images/hero-bg.jpg";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     >
       <Navbar />
       <HeroSection />
+      <TrendingSection />
     </div>
   );
 }

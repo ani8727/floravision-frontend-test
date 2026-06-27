@@ -1,7 +1,9 @@
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
-    <div className="min-h-screen bg-[#0B1D16] text-white">
-      FloraVision
+    <div className="min-h-screen bg-[#071A12]">
+      <Navbar />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import Navbar from "./components/navbar/Navbar";
 import HeroSection from "./components/hero/HeroSection";
 import TrendingSection from "./components/trending/TrendingSection";
 import TopSellingSection from "./components/topSelling/TopSellingSection";
+import CustomerReview from "./components/CustomerReview/CustomerReview";
 import bg from "./assets/images/hero-bg.jpg";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <HeroSection />
       <TrendingSection />
       <TopSellingSection />
+      <CustomerReview />
     </div>
   );
 }

@@ -1,53 +1,41 @@
-function TrendCard({
-  title,
-  description,
-  price,
-  image,
-  reverse = false,
-}) {
+function TrendCard({ plant }) {
   return (
     <div
       className={`
-        relative
-        flex
-        items-center
-        justify-between
-        rounded-[40px]
-        border
-        border-white/20
+        flex items-center justify-between
+        rounded-[48px]
         bg-white/5
         backdrop-blur-md
-        px-10
-        py-8
-        min-h-[350px]
-        overflow-hidden
-        ${reverse ? "flex-row-reverse" : ""}
+        border border-white/20
+        px-12 py-10
+        min-h-[360px]
+        ${plant.reverse ? "flex-row-reverse" : ""}
       `}
     >
-      {/* Plant Image */}
+      {/* Plant */}
       <div className="w-[40%] flex justify-center">
         <img
-          src={image}
-          alt="plant"
-          className="w-[280px] object-contain"
+          src={plant.image}
+          alt={plant.title}
+          className="w-[300px] object-contain"
         />
       </div>
 
-      {/* Text Content */}
+      {/* Text */}
       <div className="w-[50%] text-white">
-        <h3 className="text-[32px] font-semibold leading-tight">
-          {title}
+        <h3 className="text-[36px] font-semibold leading-tight">
+          {plant.title}
         </h3>
 
-        <p className="mt-5 text-white/70 leading-relaxed text-[17px]">
-          {description}
+        <p className="mt-6 text-white/75 leading-relaxed text-[18px]">
+          {plant.description}
         </p>
 
-        <p className="mt-6 text-[28px] font-semibold">
-          {price}
-        </p>
+        <h4 className="mt-6 text-[28px] font-semibold">
+          {plant.price}
+        </h4>
 
-        <button className="mt-6 px-8 py-3 rounded-xl border border-white hover:bg-white hover:text-black transition">
+        <button className="mt-6 px-8 py-3 rounded-xl border border-white">
           Explore
         </button>
       </div>

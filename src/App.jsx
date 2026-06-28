@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar/Navbar";
 import HeroSection from "./components/hero/HeroSection";
 import TrendingSection from "./components/trending/TrendingSection";
+import TopSellingSection from "./components/topSelling/TopSellingSection";
 import bg from "./assets/images/hero-bg.jpg";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <TrendingSection />
+      <TopSellingSection />
     </div>
   );
 }

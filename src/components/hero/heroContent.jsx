@@ -2,30 +2,27 @@ import { Play } from "lucide-react";
 
 function HeroContent() {
   return (
-    <div className="max-w-[800px] text-white">
-      {/* Heading */}
-      <h1 className="text-[70px] lg:text-[118px] font-semibold leading-none opacity-80">
+    <div className="text-white max-w-[600px]">
+      <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-[80px] font-semibold leading-none">
         Earth’s Exhale
       </h1>
 
-      {/* Description */}
-      <p className="mt-8 text-[18px] lg:text-[23px] max-w-[770px] text-white/75">
-        “Earth Exhale” symbolizes the purity and vitality of the Earth's
+      <p className="mt-6 text-base md:text-lg lg:text-xl text-white/70 max-w-[700px]">
+        “Earth Exhale” symbolizes the purity and vitality of the Earth’s
         natural environment and its essential role in sustaining life.
       </p>
 
-      {/* Buttons */}
-      <div className="flex items-center gap-8 mt-10">
-        <button className="w-[217px] h-[64px] border-2 border-white rounded-xl text-[28px]">
+      <div className="flex items-center gap-6 mt-6 flex-wrap">
+        <button className="px-6 py-3 border border-white rounded-xl text-lg hover:bg-white hover:text-black transition">
           Buy Now
         </button>
 
-        <div className="flex items-center gap-4 cursor-pointer">
-          <div className="w-[70px] h-[70px] rounded-full border-2 border-white flex items-center justify-center">
-            <Play size={26} fill="white" />
+        <div className="flex items-center gap-3 cursor-pointer">
+          <div className="w-14 h-14 rounded-full border border-white flex items-center justify-center">
+            <Play size={18} fill="white" />
           </div>
 
-          <span className="text-[25px]">Live Demo...</span>
+          <span className="text-lg">Live Demo...</span>
         </div>
       </div>
     </div>

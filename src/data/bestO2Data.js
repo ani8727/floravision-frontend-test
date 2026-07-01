@@ -1,7 +1,7 @@
-import plant1 from "../assets/images/plants/plant-1.png";
-import plant2 from "../assets/images/plants/plant-1.png";
-import plant3 from "../assets/images/plants/plant-1.png";
-import plant4 from "../assets/images/plants/plant-1.png";
+import plant1 from "../assets/images/plants/Aglaonema.png";
+import plant2 from "../assets/images/plants/Aglaonema.png";
+import plant3 from "../assets/images/plants/Aglaonema.png";
+import plant4 from "../assets/images/plants/Aglaonema.png";
 
 const bestO2Data = [
   {

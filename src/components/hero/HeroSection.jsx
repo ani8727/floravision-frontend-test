@@ -1,24 +1,22 @@
 import HeroContent from "./HeroContent";
-import ProductCard from "./ProductCard";
-import ReviewCard from "./ReviewCard";
+import ProductSlider from "./ProductSlider";
+import ReviewSlider from "./ReviewSlider";
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen px-10 lg:px-20 pt-28 overflow-hidden">
+    <section className="min-h-screen px-6 md:px-12 lg:px-20 pt-16 pb-20">
+      <div className="flex flex-col lg:flex-row justify-between gap-12">
 
-      {/* Left content */}
-      <div className="absolute top-40 left-10 lg:left-20 z-20">
-        <HeroContent />
-      </div>
+        {/* Left */}
+        <div className="flex flex-col justify-between gap-16">
+          <HeroContent />
+          <ReviewSlider />
+        </div>
 
-      {/* Review Card */}
-      <div className="absolute left-10 lg:left-20 bottom-20 z-20">
-        <ReviewCard />
-      </div>
-
-      {/* Product Card */}
-      <div className="absolute right-10 lg:right-20 top-32 z-20">
-        <ProductCard />
+        {/* Right */}
+        <div className="flex justify-center lg:justify-end">
+          <ProductSlider />
+        </div>
       </div>
     </section>
   );

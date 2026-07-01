@@ -1,35 +1,38 @@
-import plant from "../../assets/images/product-plant/product-1.png";
 import { ChevronRight } from "lucide-react";
 
-function ProductCard() {
+function ProductCard({ product, currentIndex, total }) {
   return (
-    <div className="relative w-[420px] h-[580px] rounded-[40px] bg-white/5 backdrop-blur-md border border-white/20">
+    <div className="relative w-[350px] h-[420px] rounded-[40px] bg-white/10 backdrop-blur-xl border border-white/20">
 
-      {/* Plant Image */}
       <img
-        src={plant}
-        alt="Plant"
-        className="absolute -top-20 left-1/2 -translate-x-1/2 w-[300px]"
+        src={product.image}
+        alt={product.name}
+        className="absolute -top-16 left-1/2 -translate-x-1/2 w-[280px]"
       />
 
-      {/* Content */}
-      <div className="absolute bottom-12 left-10 right-10 text-white">
-        <p className="text-[23px] text-white/75">Indoor Plant</p>
+      <div className="absolute bottom-10 left-8 right-8 text-white">
+        <p className="text-white/70">{product.category}</p>
 
-        <div className="flex justify-between items-center mt-3">
-          <h2 className="text-[36px]">Aglaonema plant</h2>
-          <ChevronRight size={24} />
+        <div className="flex justify-between items-center mt-2">
+          <h2 className="text-3xl">{product.name}</h2>
+          <ChevronRight />
         </div>
 
-        <button className="mt-6 w-[217px] h-[64px] rounded-xl border-2 border-white text-[28px]">
+        <button className="mt-5 px-8 py-3 border border-white rounded-xl">
           Buy Now
         </button>
 
-        {/* Slider dots */}
-        <div className="flex justify-center gap-3 mt-8">
-          <div className="w-6 h-2 rounded-full bg-white"></div>
-          <div className="w-2 h-2 rounded-full bg-white"></div>
-          <div className="w-2 h-2 rounded-full bg-white"></div>
+        <div className="flex justify-center gap-2 mt-6">
+          {[...Array(total)].map((_, index) => (
+            <div
+              key={index}
+              className={`rounded-full ${
+                index === currentIndex
+                  ? "w-6 h-2 bg-white"
+                  : "w-2 h-2 bg-white/50"
+              }`}
+            />
+          ))}
         </div>
       </div>
     </div>

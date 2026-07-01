@@ -1,58 +1,64 @@
-import plant1 from "../assets/images/topSelling-plant/top-1.png";
-import plant2 from "../assets/images/topSelling-plant/top-1.png";
-import plant3 from "../assets/images/topSelling-plant/top-1.png";
-import plant4 from "../assets/images/topSelling-plant/top-1.png";
-import plant5 from "../assets/images/topSelling-plant/top-1.png";
-import plant6 from "../assets/images/topSelling-plant/top-1.png";
+import plant1 from "../assets/images/plants/Agave.png";
+import plant2 from "../assets/images/plants/Aglaonema.png";
+import plant3 from "../assets/images/plants/Cactus.png";
+import plant4 from "../assets/images/plants/Plantain_Lilies.png";
+import plant5 from "../assets/images/plants/sansevieria.png";
+import plant6 from "../assets/images/plants/Swiss_cheese.png";
 
 const topSellingData = [
   {
     id: 1,
-    name: "Aglaonema plant",
+    name: "Agave plant",
     description:
-      "The Aglaonema plant, commonly known as Chinese Evergreen, known for its attractive foliage and ease of care.",
+      "A succulent plant known for thick leaves and strong drought resistance.",
     price: "Rs. 300/-",
     image: plant1,
+    imageClass: "w-[155px] h-[190px]",
   },
   {
     id: 2,
     name: "Aglaonema plant",
     description:
-      "The Aglaonema plant, commonly known as Chinese Evergreen, known for its attractive foliage and ease of care.",
-    price: "Rs. 300/-",
+      "Chinese Evergreen with beautiful foliage and easy maintenance.",
+    price: "Rs. 380/-",
     image: plant2,
+    imageClass: "w-[185px] h-[210px]",
   },
   {
     id: 3,
-    name: "Aglaonema plant",
+    name: "Cactus",
     description:
-      "The Aglaonema plant, commonly known as Chinese Evergreen, known for its attractive foliage and ease of care.",
-    price: "Rs. 300/-",
+      "A hardy desert plant that thrives in dry environments.",
+    price: "Rs. 259/-",
     image: plant3,
+    imageClass: "w-[125px] h-[190px]",
   },
   {
     id: 4,
-    name: "Aglaonema plant",
+    name: "Plantain Lilies",
     description:
-      "The Aglaonema plant, commonly known as Chinese Evergreen, known for its attractive foliage and ease of care.",
-    price: "Rs. 300/-",
+      "Decorative leafy plant with wide patterned leaves.",
+    price: "Rs. 400/-",
     image: plant4,
+    imageClass: "w-[180px] h-[200px]",
   },
   {
     id: 5,
-    name: "Aglaonema plant",
+    name: "Sansevieria",
     description:
-      "The Aglaonema plant, commonly known as Chinese Evergreen, known for its attractive foliage and ease of care.",
-    price: "Rs. 300/-",
+      "Low-maintenance indoor plant with upright sword-like leaves.",
+    price: "Rs. 450/-",
     image: plant5,
+    imageClass: "w-[145px] h-[185px]",
   },
   {
     id: 6,
-    name: "Aglaonema plant",
+    name: "Swiss Cheese Plant",
     description:
-      "The Aglaonema plant, commonly known as Chinese Evergreen, known for its attractive foliage and ease of care.",
-    price: "Rs. 300/-",
+      "Popular tropical plant with iconic split leaves.",
+    price: "Rs. 359/-",
     image: plant6,
+    imageClass: "w-[165px] h-[195px]",
   },
 ];
 

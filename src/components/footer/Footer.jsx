@@ -2,7 +2,7 @@ import React from "react";
 import { quickLinks, socialLinks } from "../../data/footerData";
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#081B08] text-white px-8 md:px-16 py-20">
+    <footer id="footer" className="w-full bg-[#081B08] text-white px-8 md:px-16 py-20">
       <div className="max-w-7xl mx-auto">
         {/* top dots */}
         <div className="flex justify-center gap-2 mb-20">

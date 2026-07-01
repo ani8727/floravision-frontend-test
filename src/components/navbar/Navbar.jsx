@@ -1,47 +1,67 @@
-import navLinks from "../../data/navLinks";
-import { Search, ShoppingBag, Menu } from "lucide-react";
-
-// import your logo image here
+import { useState } from "react";
+import { Search, ShoppingBag } from "lucide-react";
 import logo from "../../assets/images/logo.png";
 
-function Navbar() {
-  return (
-    <header className="w-full px-6 md:px-12 lg:px-20 py-6">
-      <div className="flex items-center justify-between">
+import NavLinks from "./NavLinks";
+import MobileMenu from "./MobileMenu";
+import SearchBox from "./SearchBox";
+import CartPopup from "./CartPopup";
 
-        {/* Left Section */}
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
+
+  return (
+    <header className="relative z-50 w-full px-3 md:px-6 lg:px-10 py-8">
+      <div className="flex items-center justify-between">
+        {/* Logo */}
         <div className="flex items-center gap-3">
           <img
             src={logo}
             alt="FloraVision Logo"
             className="w-10 h-10 md:w-12 md:h-12"
           />
-
-          <h1 className="text-white text-2xl font-black">
+          <h1 className="text-white/75 text-[24px] font-black leading-none">
             FloraVision.
           </h1>
         </div>
 
-        {/* Center Nav Links */}
-        <nav className="hidden md:flex items-center gap-10 text-white">
-          {navLinks.map((link, index) => (
-            <a
-              key={index}
-              href="#"
-              className="hover:text-green-300 transition duration-300"
-            >
-              {link}
-            </a>
-          ))}
-        </nav>
+        <NavLinks />
 
         {/* Right Icons */}
-        <div className="flex items-center gap-5 text-white">
-          <Search size={22} className="cursor-pointer" />
-          <ShoppingBag size={22} className="cursor-pointer" />
-          <Menu size={26} className="cursor-pointer md:hidden lg:block" />
+        <div className="flex items-center gap-10 text-white">
+          <Search
+            size={22}
+            strokeWidth={1.4}
+            className="text-white/75 cursor-pointer hover:text-green-200 transition"
+            onClick={() => setSearchOpen(!searchOpen)}
+          />
+
+          <ShoppingBag
+            size={22}
+            strokeWidth={1.4}
+            className="text-white/75 cursor-pointer hover:text-green-200 transition"
+            onClick={() => setCartOpen(!cartOpen)}
+          />
+
+          <button
+            onClick={() => {
+              if (window.innerWidth < 768) {
+                setMenuOpen(!menuOpen);
+              }
+            }}
+            className="flex flex-col gap-[8px] cursor-pointer group"
+          >
+            <span className="w-6 h-[2px] bg-white rounded group-hover:bg-green-200 transition"></span>
+            <span className="w-4 h-[2px] bg-white rounded self-end group-hover:bg-green-200 transition"></span>
+          </button>
         </div>
       </div>
+
+      <MobileMenu menuOpen={menuOpen} />
+      <SearchBox searchOpen={searchOpen} />
+      <CartPopup cartOpen={cartOpen} />
     </header>
   );
 }
